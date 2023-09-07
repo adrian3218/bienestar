@@ -1,127 +1,44 @@
-/* Estilo para los encabezados h1 a h6 */
-h1, h2, h3, h4, h5, h6 {
-  
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold; /* Cambia la ponderación de la fuente según tus preferencias */
-  color: #333; /* Cambia el color del texto según tu elección */
-  margin-top: 20px; /* Espacio superior */
-  margin-bottom: 10px; /* Espacio inferior */
-}
+/* Registro.css */
 
-h1 {
- text-align: left;
-  font-size: 50px; /* Cambia el tamaño de fuente según tus preferencias */
-}
-
-h2 {
-  font-size: 30px;
-}
-
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}
-/* Estilo para el contenedor principal */
-html, body {
-  background-color:#75D4DD;
-  height: 100%;
-  margin: 0;
-  padding: 80px;
-  overflow: hidden;
-}
-
-body {
-  background-attachment: fixed;
-  background-size: cover;
-  background-size: cover; 
-  background-position: center center;
-  background-repeat: no-repeat; 
-  position: fixed;
-  left: 20;
-  width: 90%;
-  height: 200%;
-}
-
-/* Estilo para el logo */
-.img{
-  float: right;
-  margin-top: 20px;
-  margin-left: 30px;
-  
-}
-
-
-/* Estilo para los campos de entrada */
-input {
-  border-radius: 20px; /* Bordes circulares */
-  width: 20%;
-  padding: 20px;
-  border: 2px solid #ccc;
-  margin-bottom: 15px;
-}
-
-/* Estilo para el desplegable */
-select {
-  border: 20px; /* Bordes circulares */
-  width: 20%;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-/* Estilo para el campo de fecha */
-input[type="date"] {
-  border-radius: 20px; /* Bordes circulares */
-  width: 20%;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-/* Estilo para los botones */
-button {
-  border-radius: 30px; /* Bordes circulares */
-  padding: 20px 30px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  text-align: center;
-  background-color: #0056b3;
-}
-
-/* Estilo para el componente de autocompletado */
-.Autocomplete {
-  border-radius: 20px; /* Bordes circulares */
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-/* Estilo para un borde en el contenedor principal */
+/* Contenedor principal */
 .container {
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  padding: 30px;
-  background-color: #fff;
-  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espacio entre elementos */
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 20px; /* Espacio interno */
+}
+
+/* Estilo para cada elemento del formulario */
+.container > * {
+  grid-column: span 3; /* Ocupa las 3 columnas */
+  margin-bottom: 15px; /* Espacio entre elementos */
+}
+
+/* Estilo específico para el botón */
+.container .button-container {
+  grid-column: span 3; /* Ocupa las 3 columnas */
+  text-align: center; /* Centrar el botón */
+}
+
+/* Estilo para la imagen */
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilo para los encabezados h1 y h6 */
+h1, h6 {
+  text-align: center;
+}
+
+/* Otros estilos, como los estilos para los inputs, desplegables, etc., aquí */
+
+img {
+  width: 450px;
+  height: 250px;
+  margin-left: 70%;
 }
