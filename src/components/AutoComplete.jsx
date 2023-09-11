@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 export default function AutoComplete({ nombre, array, obligatorio }) {
-  const [value, setValue] = React.useState(null); 
+  const [value, setValue] = React.useState(null);
 
   return (
     <Autocomplete
@@ -11,7 +11,7 @@ export default function AutoComplete({ nombre, array, obligatorio }) {
       disablePortal
       id="Campo-autocomplete"
       options={array}
-      value={value} 
+      value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
       }}
@@ -20,7 +20,8 @@ export default function AutoComplete({ nombre, array, obligatorio }) {
         <TextField
           {...params}
           label={nombre}
-          required={obligatorio} 
+          required={obligatorio}
+          className='color-clase' // Agrega la clase de color aquí
         />
       )}
     />

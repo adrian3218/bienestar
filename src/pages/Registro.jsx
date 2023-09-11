@@ -5,6 +5,7 @@ import Desplegable from "../components/Desplegable";
 import Fecha from "../components/Fecha";
 import Input from "../components/Input";
 import Politicas from "../components/Politicas";
+import Password from "../components/Password";  
 import miImagen from "./img/Logo.png";
 import "./Registro.css";
 
@@ -18,21 +19,8 @@ const Registro = () => {
           <br></br>No tienes una cuenta? Registrate aquí
         </h6>
       </h1>
-      <Input label="Nombres y Apellidos" />
-      <Desplegable
-        options={[
-          { value: "Cosalud", label: "Cosalud" },
-          { value: "Salud total", label: "Salud total" },
-          { value: "otro", label: "Otro" },
-        ]}
-      />
-      <Desplegable
-        options={[
-          { value: "masculino", label: "Masculino" },
-          { value: "femenino", label: "Femenino" },
-          { value: "otro", label: "Otro" },
-        ]}
-      />
+      <Input label="Nombres" />
+      <Input label="Apellidos" />
       <Desplegable
         options={[
           { value: "Targeta de identidad", label: "Targeta de identidad" },
@@ -40,10 +28,27 @@ const Registro = () => {
           { value: "otro", label: "Otro" },
         ]}
       />
-      <Input label="Correo Institucional" />
-      <Fecha label="Fecha de Nacimiento" />
       <Input label="Número de Documento" />
+      <Fecha label="Fecha de Nacimiento" />
       <Input label="Correo Personal" />
+      <Input label="Teléfono" />
+      <Input label="Correo Institucional" />
+      <Password labelText="Contraseña" />
+      <Password labelText="Confirmación Contreseña" />
+      <Desplegable
+        options={[
+          { value: "masculino", label: "Masculino" },
+          { value: "femenino", label: "Femenino" },
+          { value: "otro", label: "Otro" },
+        ]}
+      />
+      <Desplegable  placeholder= "EPS"
+        options= {[
+          { value: "Cosalud", label: "Cosalud" },
+          { value: "Salud total", label: "Salud total" },
+          { value: "otro", label: "Otro" },
+        ]}
+      />
       <Desplegable
         options={[
           { value: "aprendiz", label: "Aprendiz" },
@@ -51,9 +56,6 @@ const Registro = () => {
           { value: "administrador", label: "Administrador" },
         ]}
       />
-      <Input label="Teléfono" />
-      <Input label="Contraseña" type="password" />
-      <Input label="Confirmación de Contraseña" type="password" />
       <Autocomplete
         nombre="Ficha"
         array={[
@@ -64,7 +66,7 @@ const Registro = () => {
       />
       <Desplegable
         options={[
-          { value: "a+", label: "A" },
+          { value: "a+", label: "A+ " },
           { value: "o+", label: "O+" },
           { value: "b+", label: "B+" },
         ]}
