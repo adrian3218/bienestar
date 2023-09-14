@@ -8,6 +8,9 @@ import Politicas from "../components/Politicas";
 import Password from "../components/Password";  
 import miImagen from "./img/Logo.png";
 import "./Registro.css";
+import Peticiones from "../components/Peticiones";
+
+
 
 const Registro = () => {
   return (
