@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from 'react';
+  //REGISTRASE
+  import React, { useState,useEffect } from 'react';
 import Autocomplete from "../components/Autocomplete";
 import Button from "../components/Button";
 import Desplegable from "../components/Desplegable";
@@ -24,6 +25,23 @@ import { obtenerEPS } from '../api/Eps';
       apellidos: '',
       // Agrega otros campos del formulario aquí
     });
+    const [fichas, setFichas] = useState([]);
+
+  useEffect(() => {
+    obtenerFichas()
+      .then((fichasData) => {
+        setFichas(fichasData);
+      })
+      .catch((error) => {
+        console.error('Error al obtener las fichas:', error);
+      });
+  }, []);
+
+  const handleFichaChange = (selectedFicha) => {
+
+    console.log('Ficha seleccionada:', selectedFicha);
+  };
+
   
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -43,6 +61,7 @@ import { obtenerEPS } from '../api/Eps';
         [name]: value,
       });
     };
+ 
  
 
   return (
@@ -100,12 +119,13 @@ import { obtenerEPS } from '../api/Eps';
         ]}
       />
       <Autocomplete
-        nombre="Ficha"
-        array={[
-          { label: 2712267, programa: "Programación de software" },
-          { label: 2812267, programa: "analicis " },
-          { label: 2912267, programa: "cocina" },
-        ]}
+       nombre="Ficha"
+       array={fichas}
+       getOptionLabel={(option) => {
+         const label = option.nombre || ''; 
+         console.debug('getOptionLabel', label);
+         return label;
+       }}
       />
       <Desplegable
       label="Tipo de Sangre"
